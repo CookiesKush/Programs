@@ -53,6 +53,7 @@ These are some extra programs that i either created because why not or they have
 ```shell
 > Backdoor script (will make file undeleteable)
 > Advanced history grabber
+> TCP pinger
 ```
 
 ## <a id="requirements"></a>:white_check_mark: 〢 Requirements ##
